@@ -14,6 +14,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+	            <groupId>testsmells</groupId>
+	            <artifactId>TestSmellDetector</artifactId>
+	            <version>0.1</version>
+	        </dependency>
 		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -33,6 +38,18 @@
 
 	<build>
 		<plugins>
+			<plugin>
+		                <groupId>testsmells</groupId>
+		                <artifactId>TestSmellDetector</artifactId>
+		                <version>0.1</version>
+		                <executions>
+		                    <execution>
+		                        <goals>
+		                            <goal>Detect</goal>
+		                        </goals>
+		                    </execution>
+		                    </executions>
+		        </plugin>
 			<!-- https://stackoverflow.com/questions/49398894/unable-to-compile-simple-java-10-java-11-project-with-maven -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
